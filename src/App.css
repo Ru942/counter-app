@@ -1,0 +1,797 @@
+/*======================================
+  GOOGLE FONT
+======================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/*======================================
+  GLOBAL
+======================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    overflow-x:hidden;
+
+    background:linear-gradient(-45deg,
+    #4facfe,
+    #00f2fe,
+    #43e97b,
+    #38f9d7);
+
+    background-size:400% 400%;
+
+    animation:gradientBG 12s ease infinite;
+
+}
+
+/*======================================
+  ANIMATED BACKGROUND
+======================================*/
+
+@keyframes gradientBG{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+/*======================================
+  MAIN CONTAINER
+======================================*/
+
+.container{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/*======================================
+  FLOATING BLOBS
+======================================*/
+
+.blob{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(45px);
+
+    opacity:.35;
+
+    animation:float 8s ease-in-out infinite;
+
+}
+
+.blob1{
+
+    width:220px;
+
+    height:220px;
+
+    background:#ff6ec7;
+
+    top:5%;
+
+    left:10%;
+
+}
+
+.blob2{
+
+    width:170px;
+
+    height:170px;
+
+    background:#00dbde;
+
+    bottom:8%;
+
+    right:10%;
+
+    animation-delay:2s;
+
+}
+
+.blob3{
+
+    width:130px;
+
+    height:130px;
+
+    background:#ffe53b;
+
+    top:65%;
+
+    left:20%;
+
+    animation-delay:4s;
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-30px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*======================================
+  CARD
+======================================*/
+
+.card{
+
+    width:420px;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+    color:white;
+
+    text-align:center;
+
+    position:relative;
+
+    z-index:5;
+
+    animation:fadeUp .8s ease;
+
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*======================================
+  TITLE
+======================================*/
+
+.card h1{
+
+    font-size:34px;
+
+    margin-bottom:8px;
+
+    font-weight:700;
+
+}
+
+.subtitle{
+
+    opacity:.9;
+
+    margin-bottom:25px;
+
+    font-size:15px;
+
+}
+
+.subtitle span{
+
+    color:#ffe600;
+
+    font-weight:bold;
+
+}
+
+/*======================================
+  COUNTER
+======================================*/
+
+.counter{
+
+    width:160px;
+
+    height:160px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:white;
+
+    color:#2575fc;
+
+    font-size:60px;
+
+    font-weight:bold;
+
+    box-shadow:
+    0 0 20px rgba(255,255,255,.7),
+    0 0 40px rgba(37,117,252,.5),
+    0 15px 30px rgba(0,0,0,.25);
+
+    animation:bounce .35s;
+
+    transition:.35s;
+
+}
+
+.counter:hover{
+
+    transform:scale(1.08);
+
+}
+
+@keyframes bounce{
+
+    0%{
+
+        transform:scale(.7);
+
+    }
+
+    50%{
+
+        transform:scale(1.12);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/*======================================
+  PROGRESS BAR
+======================================*/
+
+.progress{
+
+    width:100%;
+
+    height:12px;
+
+    background:rgba(255,255,255,.25);
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    margin:25px 0 10px;
+
+}
+
+.progress-fill{
+
+    height:100%;
+
+    width:0;
+
+    border-radius:30px;
+
+    background:linear-gradient(to right,#00ff95,#00d4ff);
+
+    transition:width .5s ease;
+
+}
+
+.percentage{
+
+    font-size:14px;
+
+    opacity:.9;
+
+    margin-bottom:20px;
+
+}
+
+/*======================================
+  STATUS MESSAGE
+======================================*/
+
+.status{
+
+    margin-bottom:20px;
+
+}
+
+.status h3{
+
+    font-size:20px;
+
+    font-weight:600;
+
+    animation:fadeText .5s ease;
+
+}
+
+@keyframes fadeText{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*======================================
+  CELEBRATION
+======================================*/
+
+.celebrate{
+
+    font-size:35px;
+
+    margin-bottom:20px;
+
+    animation:jump 1s infinite;
+
+}
+
+@keyframes jump{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*======================================
+  STATISTICS
+======================================*/
+
+.stats{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin:25px 0;
+
+}
+
+.stat-box{
+
+    flex:1;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    background:rgba(255,255,255,.12);
+
+    transition:.3s;
+
+}
+
+.stat-box:hover{
+
+    transform:translateY(-6px);
+
+    background:rgba(255,255,255,.22);
+
+}
+
+.stat-box h2{
+
+    font-size:28px;
+
+    margin-bottom:5px;
+
+}
+
+.stat-box p{
+
+    font-size:14px;
+
+    opacity:.9;
+
+}
+
+/*======================================
+  BUTTONS
+======================================*/
+
+.buttons{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    margin-top:25px;
+
+}
+
+button{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.25);
+
+    transform:skewX(-25deg);
+
+    transition:.6s;
+
+}
+
+button:hover::before{
+
+    left:120%;
+
+}
+
+button:hover:not(:disabled){
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.25);
+
+}
+
+button:active{
+
+    transform:scale(.95);
+
+}
+
+.increment{
+
+    background:#00c853;
+
+}
+
+.decrement{
+
+    background:#ff5252;
+
+}
+
+.reset{
+
+    background:#2962ff;
+
+}
+
+button:disabled{
+
+    background:#9e9e9e;
+
+    cursor:not-allowed;
+
+    box-shadow:none;
+
+}
+
+/*======================================
+  LIVE CLOCK
+======================================*/
+
+.clock{
+
+    margin-top:30px;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    background:rgba(255,255,255,.10);
+
+}
+
+.clock h3{
+
+    margin-bottom:6px;
+
+}
+
+.clock p{
+
+    font-size:14px;
+
+    opacity:.9;
+
+}
+
+/*======================================
+  FOOTER
+======================================*/
+
+.footer{
+
+    margin-top:25px;
+
+    padding-top:15px;
+
+    border-top:1px solid rgba(255,255,255,.25);
+
+}
+
+.footer p{
+
+    font-size:15px;
+
+    margin-bottom:6px;
+
+}
+
+.footer span{
+
+    color:#ffe600;
+
+    font-weight:600;
+
+}
+
+.footer small{
+
+    opacity:.85;
+
+    letter-spacing:1px;
+
+}
+
+/*======================================
+  SCROLLBAR
+======================================*/
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#dfe9f3;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#2575fc;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#0b5ed7;
+
+}
+
+/*======================================
+  RESPONSIVE DESIGN
+======================================*/
+
+@media(max-width:768px){
+
+    .card{
+
+        width:95%;
+
+        padding:30px;
+
+    }
+
+    .counter{
+
+        width:145px;
+
+        height:145px;
+
+        font-size:55px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .container{
+
+        padding:15px;
+
+    }
+
+    .card{
+
+        width:100%;
+
+        padding:25px;
+
+    }
+
+    .card h1{
+
+        font-size:28px;
+
+    }
+
+    .subtitle{
+
+        font-size:14px;
+
+    }
+
+    .counter{
+
+        width:120px;
+
+        height:120px;
+
+        font-size:45px;
+
+    }
+
+    .stats{
+
+        flex-direction:column;
+
+    }
+
+    button{
+
+        font-size:15px;
+
+        padding:12px;
+
+    }
+
+    .clock h3{
+
+        font-size:18px;
+
+    }
+
+}
+
+/*======================================
+  END OF FILE
+======================================*/
