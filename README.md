@@ -6,23 +6,13 @@ A simple, modern, and responsive **Counter Application** built with **React.js**
 
 ## 🚀 Live Demo
 
-🌐 **Coming Soon**
+🌐 https://counter-app-sable-theta.vercel.app/
 
 ---
 
 ## 📂 Repository
 
 **GitHub:** https://github.com/Ru942/counter-app
-
----
-
-## 📸 Preview
-
-> Add a screenshot of your application here.
-
-```md
-![Counter App](./src/assets/counter-preview.png)
-```
 
 ---
 
